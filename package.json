@@ -1,0 +1,38 @@
+{
+  "name": "antigravity-quota",
+  "version": "1.0.0",
+  "description": "查询并可视化展示 Antigravity 模型额度",
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "antigravity-quota": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outfile dist/cli.js --target node && chmod +x dist/cli.js",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "antigravity",
+    "quota",
+    "cli",
+    "cursor"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2"
+  }
+}
